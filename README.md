@@ -629,10 +629,3 @@ print('weight in kilograms', weight_kg)
     weight in kilograms 65.0
 
 
-
-    [H[2J
-
-
-```python
-
-```
