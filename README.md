@@ -2,7 +2,7 @@
 This is a portfolio of Computational Python I have learned during Fall 2025 quarter of Bisc 450c.
 
 
-## Using Jupiter Notebook 1 & 2
+## Using Jupiter Notebook 1 & 2 
 
 ```python
 %matplotlib inline
