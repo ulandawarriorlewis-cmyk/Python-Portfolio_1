@@ -1967,7 +1967,7 @@ def std_dev(sample):
     return numpy.sqrt(sum_squared-devs / (len(sample) -1))
 ```
 
-# Defensive Programming 
+# Defensive Programming  
 
 ```python
 # Postive Numerical value must be positive inorder for no errors occur.
