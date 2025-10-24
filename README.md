@@ -1113,7 +1113,7 @@ print(odds[3])
     5
     7
 
-# Below is an example of how errors can occur if you try to print more data than what was listed.
+### Below is an example of how errors can occur if you try to print more data than what was listed.
 
 ```python
 odds = [1,3,5]
@@ -1141,7 +1141,7 @@ print(odds[3])
 
     IndexError: list index out of range
 
-# Instead we can a loop to solve it.
+### Instead we can a loop to solve it.
 
 ```python
 odds = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
