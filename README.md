@@ -1476,7 +1476,7 @@ print_temperature()
     Temperature in Kelvin was: 373.15
 
 
-# Functions part 2-4
+# Functions part 2
 
 ```python
 
@@ -1562,7 +1562,7 @@ for filename in filenames[:3]:
     Minima add up to zero!
 
 
-## Functions Part 3
+## Functions Part 3-4
 
 
 ```python
