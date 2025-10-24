@@ -1440,12 +1440,6 @@ print('boiling point of water in kelvin:', fahr_to_kelvin(212.0))
     boiling point of water in kelvin: 373.15
 
 
-
-```python
-
-```
-
-
 ```python
 temp_kelving = fahr_to_kelvin(212.0)
 print('Temperature in kelving was:', temp_kelving)
@@ -1532,12 +1526,6 @@ def detect_problems(filename):
 
 ```
 
-
-```python
-
-```
-
-
 ```python
 
 filenames = sorted(glob.glob('inflammation*csv'))
@@ -1574,15 +1562,7 @@ for filename in filenames[:3]:
     Minima add up to zero!
 
 
-
-```python
-
-```
-
-
-```python
-# Functions Part 3
-```
+## Functions Part 3
 
 
 ```python
@@ -1813,12 +1793,6 @@ display(55, 66)
     a: 55 b: 2 c: 3
     two parameter:
     a: 55 b: 66 c: 3
-
-
-
-```python
-
-```
 
 
 ```python
