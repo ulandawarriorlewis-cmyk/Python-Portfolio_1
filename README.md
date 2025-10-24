@@ -1969,3 +1969,138 @@ def std_dev(sample):
 
 # Defensive Programming 
 
+```python
+# Postive Numerical value must be positive inorder for no errors occur.
+numbers =[1.5, 2.3, 0.7, 0.001, 4.4]
+total = 0.0
+for num in numbers:
+    assert num > 0.0, 'Data should only contain positive values'
+    total += num
+print('total is:', total) 
+```
+
+    total is: 8.901
+
+
+
+```python
+def normalize_rectangle(rect):
+    """Normalizes a rectangle so that it is at the origin and 1.0 units longs on its longest axis.
+    input should be of the format (x0, y0, x1, y1).
+    (x0, y0) and (x1, y1) define the lower left and upper right corners of the retangle respectively."""
+    assert len(rect) == 4, 'Retangles must contain 4 coordinates'
+    x0, y0, x1, y1 = rect
+    assert x0 < x1, 'Invalid X coordinates'
+    assert y0 < y1, 'Invalid Y coordinates'
+    
+    dx = x1 - x0
+    dy = y1 - y0
+    if dx > dy:
+        scaled = dx /dy
+        upper_x, upper_y = 1.0, scaled
+    else: 
+        scaled = dx / dy
+        upper_x, upper_y = scaled, 1.0
+        
+    assert 0 < upper_x <= 1.0, 'Calculate upper x coordinate invalid'
+    assert 0 < upper_y <= 1.0, 'Calculate upper y coordinate invalid'
+    
+    return (0, 0, upper_x, upper_y)
+```
+
+## Below is an error to show that the variable Rectangle must have 4 coordinate.
+## These errors were done purposefully to show how the correct number of coordinates are needed to run certian codes.
+
+
+```python
+print(normalize_rectangle((0.0, 1.0, 2.0)))
+```
+
+
+    ---------------------------------------------------------------------------
+
+    AssertionError                            Traceback (most recent call last)
+
+    <ipython-input-10-a81b6ed7619a> in <module>
+    ----> 1 print(normalize_rectangle((0.0, 1.0, 2.0)))
+    
+
+    <ipython-input-8-78a56daaca50> in normalize_rectangle(rect)
+          3     input should be of the format (x0, y0, x1, y1).
+          4     (x0, y0) and (x1, y1) define the lower left and upper right corners of the retangle respectively."""
+    ----> 5     assert len(rect) == 4, 'Retangles must contain 4 coordinates'
+          6     x0, y0, x1, y1 = rect
+          7     assert x0 < x1, 'Invalid X coordinates'
+
+
+    AssertionError: Retangles must contain 4 coordinates
+
+
+
+
+## This error occured becasue the first data value is less than the third coordinates and it should not be like that.
+
+```python
+print(normalize_rectangle((4.0, 2.0, 1.0, 5.0)))
+```
+
+
+    ---------------------------------------------------------------------------
+
+    AssertionError                            Traceback (most recent call last)
+
+    <ipython-input-16-5e28a32bada1> in <module>
+    ----> 1 print(normalize_rectangle((4.0, 2.0, 1.0, 5.0)))
+    
+
+    <ipython-input-8-78a56daaca50> in normalize_rectangle(rect)
+          5     assert len(rect) == 4, 'Retangles must contain 4 coordinates'
+          6     x0, y0, x1, y1 = rect
+    ----> 7     assert x0 < x1, 'Invalid X coordinates'
+          8     assert y0 < y1, 'Invalid Y coordinates'
+          9 
+
+
+    AssertionError: Invalid X coordinates
+
+
+## Now that all requierments were met, no error should occur. 
+
+```python
+print(normalize_rectangle( (0.0, 0.0, 1.0, 5.0)))
+```
+
+    (0, 0, 0.2, 1.0)
+
+
+
+```python
+## This error occured to show that if you swap 2 coordinates an error will occur, because in previous code instruction,
+## the third coordinate was listed to be greater than the other coordinates. 
+```
+
+
+```python
+print(normalize_rectangle((0.0, 0.0, 5.0, 1.0)))
+```
+
+
+    ---------------------------------------------------------------------------
+
+    AssertionError                            Traceback (most recent call last)
+
+    <ipython-input-20-1337bef8f4bf> in <module>
+    ----> 1 print(normalize_rectangle((0.0, 0.0, 5.0, 1.0)))
+    
+
+    <ipython-input-8-78a56daaca50> in normalize_rectangle(rect)
+         18 
+         19     assert 0 < upper_x <= 1.0, 'Calculate upper x coordinate invalid'
+    ---> 20     assert 0 < upper_y <= 1.0, 'Calculate upper y coordinate invalid'
+         21 
+         22     return (0, 0, upper_x, upper_y)
+
+
+    AssertionError: Calculate upper y coordinate invalid
+
+# Transcribing DNA - RNA
