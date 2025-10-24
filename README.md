@@ -2104,18 +2104,17 @@ print(normalize_rectangle((0.0, 0.0, 5.0, 1.0)))
     AssertionError: Calculate upper y coordinate invalid
 
 # Transcribing DNA - RNA
-```python
-# Prompt the user to enter the input fasta file name
 
+# Prompt the user to enter the input fasta file name.
+```python
 input_file_name = input("Enter the name of the input fasta file: ")
 ```
 
     Enter the name of the input fasta file:  sequence.txt
 
 
-
+# Open the input fasta file and read the DNA sequence.
 ```python
-# Open the input fasta file and read the DNA sequence
 
 with open(input_file_name, "r") as input_file:
     dna_sequence = ""
@@ -2125,9 +2124,9 @@ with open(input_file_name, "r") as input_file:
         dna_sequence += line.strip()
 ```
 
-
+# Transcibe the DNA to RNA.
 ```python
-# Transcibe the DNA to RNA
+
 rna_sequence =""
 for nucleotide in dna_sequence:
     if nucleotide == "T":
@@ -2136,9 +2135,8 @@ for nucleotide in dna_sequence:
         rna_sequence += nucleotide
 ```
 
-
-```python
 # Prompt the user to enter the output file name
+```python
 
 output_file_name = input("Enter the name of the output file:")
 ```
@@ -2146,9 +2144,9 @@ output_file_name = input("Enter the name of the output file:")
     Enter the name of the output file: sequence_rna.txt
 
 
-
-```python
 # Save the RNA sequence to a text file
+```python
+
 with open(output_file_name, "w") as output_file:
     output_file.write(rna_sequence)
     print("The RNA sequence has been saved to {output_file_name}")
