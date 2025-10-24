@@ -2105,7 +2105,7 @@ print(normalize_rectangle((0.0, 0.0, 5.0, 1.0)))
 
 # Transcribing DNA - RNA
 
-# Prompt the user to enter the input fasta file name.
+## Prompt the user to enter the input fasta file name.
 ```python
 input_file_name = input("Enter the name of the input fasta file: ")
 ```
@@ -2113,7 +2113,7 @@ input_file_name = input("Enter the name of the input fasta file: ")
     Enter the name of the input fasta file:  sequence.txt
 
 
-# Open the input fasta file and read the DNA sequence.
+## Open the input fasta file and read the DNA sequence.
 ```python
 
 with open(input_file_name, "r") as input_file:
@@ -2124,7 +2124,7 @@ with open(input_file_name, "r") as input_file:
         dna_sequence += line.strip()
 ```
 
-# Transcibe the DNA to RNA.
+## Transcibe the DNA to RNA.
 ```python
 
 rna_sequence =""
@@ -2135,7 +2135,7 @@ for nucleotide in dna_sequence:
         rna_sequence += nucleotide
 ```
 
-# Prompt the user to enter the output file name
+## Prompt the user to enter the output file name
 ```python
 
 output_file_name = input("Enter the name of the output file:")
@@ -2144,7 +2144,7 @@ output_file_name = input("Enter the name of the output file:")
     Enter the name of the output file: sequence_rna.txt
 
 
-# Save the RNA sequence to a text file
+## Save the RNA sequence to a text file
 ```python
 
 with open(output_file_name, "w") as output_file:
