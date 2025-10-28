@@ -496,8 +496,8 @@ fig.tight_layout()
 
 # Python Fundamentals
 
+### Any python interpreter can be used as a calculator:
 ```python
-# Any python interpreter can be used as a calculator:
 3 + 5 * 4 
 ```
 
@@ -508,9 +508,8 @@ fig.tight_layout()
 
 
 
-
+### Lets save a value to a variable
 ```python
-# Lets save a value to a variable
 weight_kg = 60
 ```
 
@@ -2133,7 +2132,7 @@ output_file_name = input("Enter the name of the output file:")
 
     Enter the name of the output file: test.rna.fa
 
-# Save the RNA sequence to a text file
+### Save the RNA sequence to a text file
 ```python
 
 with open(output_file_name, "w") as output_file:
@@ -2156,27 +2155,24 @@ with open(output_file_name, "r") as file:
 
 
 # Translation RNA-Protein LAB
+### Prompt the user to enter the input RNA file name
 
 ```python
-# Prompt the user to enter the input RNA file name
-
 input_file_name = input("Enter the name of the input RNA file:")
 ```
 
     Enter the name of the input RNA file: test.rna.fa
 
 
-
+### Open the input RNA file and read the RNA sequence
 ```python
-# Open the input RNA file and read the RNA sequence
 
 with open(input_file_name, "r") as input_file:
     rna_sequence = input_file.read().strip()
 ```
 
-
+### Define the codon table
 ```python
-# Define the codon table
 
 codon_table = {
     "UUU": "F", "UUC": "F", "UUA": "L", "UUG": "L",
@@ -2199,9 +2195,8 @@ codon_table = {
 }
 ```
 
-
+### Translate RNA to protein
 ```python
-# Translate RNA to protein
 
 protein_sequence = ""
 for i in range(0,len(rna_sequence), 3):
@@ -2213,9 +2208,8 @@ for i in range(0,len(rna_sequence), 3):
         protein_sequence += amino_acid
 ```
 
-
+### Prompt the user to enter the output file name
 ```python
-# Prompt the user to enter the output file name
 
 output_file_name = input("Enter the name of the output file: ")
 ```
@@ -2223,10 +2217,8 @@ output_file_name = input("Enter the name of the output file: ")
     Enter the name of the output file:  outtrial.fa
 
 
-
+### Save the protein sequence to a text file
 ```python
-# Save the protein sequence to a text file
-
 with open(output_file_name, "w") as output_file:
     output_file.write(protein_sequence)
     print(f"The protein sequence has been saved to {output_file_name}")
