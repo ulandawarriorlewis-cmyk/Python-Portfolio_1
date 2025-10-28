@@ -544,21 +544,20 @@ print(weight_kg)
 weight_kg = 60.3
 ```
 
-
+### String comprised of Letters
 ```python
-# String comprised of Letters
+
 patient_name = "Jon Smith"
 ```
 
-
+### Strings comprised of numbers
 ```python
-# Strings comprised of numbers
+
 patient_id = '001'
 ```
 
-
+### Use variables in python
 ```python
-# Use variables in python
 
 weight_lb = 2.2 * weight_kg
 
@@ -568,10 +567,9 @@ print(weight_lb)
     132.66
 
 
+### Lets add a prefix to patient id
 
 ```python
-# Lets add a prefix to patient id
-
 patient_id = 'inflam_' + patient_id
 
 print(patient_id)
@@ -579,10 +577,8 @@ print(patient_id)
 
     inflam_001
 
-
-
+### Lets combine print statements
 ```python
-# Lets combine print statements
 
 print(patient_id, 'weight in kilograms:', weight_kg)
 ```
@@ -590,9 +586,8 @@ print(patient_id, 'weight in kilograms:', weight_kg)
     inflam_001 weight in kilograms: 60.3
 
 
-
+### We can call a function inside another function 
 ```python
-# We can call a function inside another function 
 
 print(type(60.3))
 print(type(patient_id))
@@ -603,9 +598,9 @@ print(type(patient_id))
 
 
 
-```python
-# We can also calculate inside the print function
+### We can also calculate inside the print function
 
+```python
 print('weight in lb:', 2.2 * weight_kg)
 ```
 
@@ -749,9 +744,8 @@ print(small)
      [2. 2. 1. 1.]]
 
 
-
+### Lets use a numpy function
 ```python
-# Lets use a numpy function
 print(numpy.mean(data))
 ```
 
@@ -807,10 +801,8 @@ print('maximum inflammation:', stdval)
     maximum inflammation: 4.613833197118566
 
 
-
+### Sometime we want to look at variation in statistical values, such as maximum inflammation per patient, or average from day one.
 ```python
-# Sometime we want to look at variation in statistical values, such as maximum inflammation per patient,
-# or average from day one.
 
 patient_0 = data[0, :] # 0 on the first axis (rows), everything on the second (columns)
 
@@ -880,9 +872,9 @@ matplotlib.pyplot.show()
 ![png](output_25_0.png)
 
 
-
+### Average inflamation over time
 ```python
-# Average inflamation over time
+
 
 ave_inflammation = numpy.mean(data, axis = 0)
 ave_plot = matplotlib.pyplot.plot(ave_inflammation)
@@ -962,9 +954,8 @@ print('"-1" element:', odds[-1])
     "-1" element: 7
 
 
-
+### Typo on darwin's name
 ```python
-# Typo on darwin's name
 names = ['Curie', 'Darwing', 'Turing']
 
 print('names is  original:', names)
@@ -1968,9 +1959,9 @@ def std_dev(sample):
 ```
 
 # Defensive Programming  
-
+### Postive Numerical value must be positive inorder for no errors occur.
 ```python
-# Postive Numerical value must be positive inorder for no errors occur.
+
 numbers =[1.5, 2.3, 0.7, 0.001, 4.4]
 total = 0.0
 for num in numbers:
@@ -2074,11 +2065,9 @@ print(normalize_rectangle( (0.0, 0.0, 1.0, 5.0)))
 
 
 
-```python
-## This error occured to show that if you swap 2 coordinates an error will occur, because in previous code instruction,
-## the third coordinate was listed to be greater than the other coordinates. 
-```
 
+### This error occured to show that if you swap 2 coordinates an error will occur, because in previous code instruction,
+### the third coordinate was listed to be greater than the other coordinates. 
 
 ```python
 print(normalize_rectangle((0.0, 0.0, 5.0, 1.0)))
@@ -2104,23 +2093,19 @@ print(normalize_rectangle((0.0, 0.0, 5.0, 1.0)))
     AssertionError: Calculate upper y coordinate invalid
 
 # Transcribing DNA - RNA
+### Translating DNA into RNA Lab
+
+### Prompt the user to enter the input fasta file name
+
 ```python
-# Translating DNA into RNA Lab
-```
-
-
-```python
-# Prompt the user to enter the input fasta file name
-
 input_file_name = input("Enter the name of the input fasta file: ")
 ```
 
     Enter the name of the input fasta file:  test.fa
 
 
-
+### Open the input fasta file and read the DNA sequence
 ```python
-# Open the input fasta file and read the DNA sequence
 
 with open(input_file_name, "r") as input_file:
     dna_sequence = ""
@@ -2130,9 +2115,9 @@ with open(input_file_name, "r") as input_file:
         dna_sequence += line.strip()
 ```
 
-
+### Transcibe the DNA to RNA
 ```python
-# Transcibe the DNA to RNA
+
 rna_sequence =""
 for nucleotide in dna_sequence:
     if nucleotide == "T":
@@ -2141,19 +2126,16 @@ for nucleotide in dna_sequence:
         rna_sequence += nucleotide
 ```
 
-
+### Prompt the user to enter the output file name
 ```python
-# Prompt the user to enter the output file name
-
 output_file_name = input("Enter the name of the output file:")
 ```
 
     Enter the name of the output file: test.rna.fa
 
-
-
-```python
 # Save the RNA sequence to a text file
+```python
+
 with open(output_file_name, "w") as output_file:
     output_file.write(rna_sequence)
     print(f"The RNA sequence has been saved to {output_file_name}")
